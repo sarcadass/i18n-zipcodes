@@ -1,0 +1,36 @@
+{
+  "name": "i18n-zipcodes",
+  "version": "1.0.0",
+  "description": "Validate international zipcodes",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarcadass/i18n-zipcodes.git"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "array-uniq": "^1.0.2",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.2",
+    "gulp-rename": "^1.2.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "i18n",
+    "zipcode",
+    "validator",
+    "international",
+    "regex"
+  ],
+  "author": "Benjamin Blonde",
+  "license": "ISC"
+}
