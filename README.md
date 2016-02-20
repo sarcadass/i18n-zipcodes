@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sarcadass/i18n-zipcodes.svg?branch=master)](https://travis-ci.org/sarcadass/i18n-zipcodes)
+
 # i18n-zipcodes
 International zipcodes validator based on Regex for Node.js and the browser.
 
