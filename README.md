@@ -15,6 +15,7 @@ $ npm install --save i18n-zipcodes
 ## Usage
 **For Node.js**
 ```js
+var i18nZipcodes = require('i18n-zipcodes');
 // i18nZipcodes(countryCode, zipCode)
 
 i18nZipcodes('us', '90210')
