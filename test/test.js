@@ -56,7 +56,6 @@ describe('i18nZipcodes: ', function() {
 				}
 				return false;
 			}
-			//console.log(hasDuplicates(countryCodeList));
 
 			return hasDuplicates(countryCodeList);
 		})();

@@ -18,19 +18,16 @@ $ npm install --save i18n-zipcodes
 var i18nZipcodes = require('i18n-zipcodes');
 // i18nZipcodes(countryCode, zipCode)
 
-i18nZipcodes('us', '90210')
-// true
+i18nZipcodes('US', '90210'); // true
 
-i18nZipcodes('fr', '5632')
-// false
+i18nZipcodes('fr', '5632'); // false
 ```
 
 **For the browser:**
 ```html
 <script src="i18n-zipcodes.min.js"></script>
 <script>
-    console.log(i18nZipcodes('fr', '75014'));
-    //Return true
+    console.log(i18nZipcodes('fr', '75014')); // true
 </script>
 ```
 
