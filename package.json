@@ -1,6 +1,6 @@
 {
   "name": "i18n-zipcodes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validate international zipcodes",
   "main": "index.js",
   "repository": {
@@ -12,14 +12,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "chai": "^3.5.0",
+    "mocha": "^5.1.1",
+    "chai": "^4.1.2",
     "array-uniq": "^1.0.2",
-    "browserify": "^13.0.0",
+    "browserify": "^16.2.0",
     "gulp": "^3.9.1",
-    "gulp-uglify": "^1.5.2",
+    "gulp-uglify": "^3.0.0",
     "gulp-rename": "^1.2.2",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^2.0.0"
   },
   "scripts": {
     "test": "mocha"
