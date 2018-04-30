@@ -1,6 +1,6 @@
 {
   "name": "i18n-zipcodes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Validate international zipcodes",
   "main": "index.js",
   "repository": {
