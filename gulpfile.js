@@ -12,11 +12,11 @@ gulp.task('build', function() {
 		.pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('buildMin', ['build'], function() {
+gulp.task('buildMin', gulp.series('build', function() {
 	return gulp.src('./dist/i18n-zipcodes.js')
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist'));
-});
+}));
 
-gulp.task('default', ['build', 'buildMin']);
+gulp.task('default', gulp.series('buildMin'));
