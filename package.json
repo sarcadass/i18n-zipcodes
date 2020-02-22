@@ -1,7 +1,7 @@
 {
   "name": "i18n-zipcodes",
-  "version": "1.0.3",
-  "description": "Validate international zipcodes",
+  "version": "2.0.0",
+  "description": "International zipcodes validator based on Regex for Node.js and the browser.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -33,5 +33,5 @@
     "regex"
   ],
   "author": "Benjamin Blonde",
-  "license": "ISC"
+  "license": "MIT"
 }
