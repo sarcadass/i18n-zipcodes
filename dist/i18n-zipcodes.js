@@ -1,3 +1,4 @@
+/*! i18n-zipcodes v2.0.0 - https://github.com/sarcadass/i18n-zipcodes */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
@@ -13,6 +14,10 @@ module.exports = function(countryCode, zipCode) {
 
 	} else {
 		throw 'The arguments required are two strings: countryCode, zipCode';
+	}
+
+	if (countryCodeId === 'gb') {
+		throw "[i18n-zipcodes] Since v.2.0.0, 'GB' has been replaced by 'UK'";
 	}
 
 	// Associate the good Regex for the countryCode input
@@ -54,7 +59,6 @@ module.exports = {
 		ca: /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$/,
 		fo: /^([a-zA-Z]{2}-)?(\d{3})?$/,
 		fr: /^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$/,
-		gb: /^GIR?0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]|[A-HK-Y][0-9]([0-9]|[ABEHMNPRV-Y]))|[0-9][A-HJKS-UW])?[0-9][ABD-HJLNP-UW-Z]{2}$/,
 		ge: /^((\d{4})|(\d{6}))$/,
 		ie: /^(([a-zA-Z]{2}(\s(([a-zA-Z0-9]{1})|(\d{2})))?)|([a-zA-Z]{3}))$/,
 		jp: /^\d{3}(-\d{4})?$/,
@@ -67,6 +71,7 @@ module.exports = {
 		pt: /^\d{4}(-)?\d{3}$/,
 		sz: /^[a-zA-Z]{1}\d{3}$/,
 		tw: /^\d{3}(\d{2})?$/,
+		uk: /^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$/,
 		us: /^\d{5}(-\d{4})?$/
 	},
 
@@ -75,7 +80,7 @@ module.exports = {
 			'is|mg'.split('|'),
 			'at|au|bd|be|bg|ch|cx|cy|dk|gl|gw|hu|li|lu|md|mk|mz|no|nz|ph|sd|si|tn|ve|xk|za'.split('|'),
 			'as|ba|cs|cu|de|dz|ee|es|fi|fm|gf|gp|gt|gu|hr|ic|id|il|it|ke|kw|lt|ma|me|mh|mm|mp|mq|mx|my|pk|pm|pr|ps|pw|re|sa|sm|th|tr|ua|uy|vi|vn|yu|zm'.split('|'),
-			'am|az|bj|by|cn|in|kg|kz|mn|ro|rs|ru|sg|tj|tm|uz'.split('|'),
+			'am|az|bj|by|cn|co|in|kg|kz|mn|ro|rs|ru|sg|tj|tm|uz'.split('|'),
 			'cz|gr|se|sk'.split('|')
 		],
 		pattern: [
