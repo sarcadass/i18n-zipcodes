@@ -1,11 +1,12 @@
-/*! i18n-zipcodes v2.0.0 - https://github.com/sarcadass/i18n-zipcodes */
+/*! i18n-zipcodes v3.0.0 - https://github.com/sarcadass/i18n-zipcodes */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
 var zipRegexLib = require('./zipRegexLib.js');
 
 module.exports = function(countryCode, zipCode) {
-	var countryCodeId, zipCodeId, zipCodeRegex, i;
+  var countryCodeId, zipCodeId, zipCodeRegex, i;
+  var libName = '[i18n-zipcodes]';
 
 	// Check the inputs
 	if (typeof countryCode == 'string' && typeof zipCode == 'string') {
@@ -13,11 +14,15 @@ module.exports = function(countryCode, zipCode) {
 		zipCodeId = zipCode.trim();
 
 	} else {
-		throw 'The arguments required are two strings: countryCode, zipCode';
+		throw libName + ' The arguments required are two strings: countryCode, zipCode.';
 	}
 
 	if (countryCodeId === 'gb') {
-		throw "[i18n-zipcodes] Since v.2.0.0, 'GB' has been replaced by 'UK'";
+		throw libName + " Since v.2.0.0, 'GB' has been replaced by 'UK'.";
+  }
+
+	if (countryCodeId === 'cs') {
+		throw libName + " Since v.3.0.0, 'CS' has been removed, use 'RS' and/or 'ME' instead.";
 	}
 
 	// Associate the good Regex for the countryCode input
@@ -79,7 +84,7 @@ module.exports = {
 		countryCode: [
 			'is|mg'.split('|'),
 			'at|au|bd|be|bg|ch|cx|cy|dk|gl|gw|hu|li|lu|md|mk|mz|no|nz|ph|sd|si|tn|ve|xk|za'.split('|'),
-			'as|ba|cs|cu|de|dz|ee|es|fi|fm|gf|gp|gt|gu|hr|ic|id|il|it|ke|kw|lt|ma|me|mh|mm|mp|mq|mx|my|pk|pm|pr|ps|pw|re|sa|sm|th|tr|ua|uy|vi|vn|yu|zm'.split('|'),
+			'as|ba|cu|de|dz|ee|es|fi|fm|gf|gp|gt|gu|hr|ic|id|il|it|ke|kw|lt|ma|me|mh|mm|mp|mq|mx|my|pk|pm|pr|ps|pw|re|sa|sm|th|tr|ua|uy|vi|vn|yu|zm'.split('|'),
 			'am|az|bj|by|cn|co|in|kg|kz|mn|ro|rs|ru|sg|tj|tm|uz'.split('|'),
 			'cz|gr|se|sk'.split('|')
 		],
