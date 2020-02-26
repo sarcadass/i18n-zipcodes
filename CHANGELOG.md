@@ -1,3 +1,15 @@
+## v3.0.0
+
+### Features
+
+- ⚠️ Remove [obsolete](https://en.wikipedia.org/wiki/ISO_3166-2:CS) **CS** code (Serbia and Montenegro). Use **RS** (Serbia) & **ME** (Montenegro) that already exist in the lib.
+
+### Miscellaneous
+
+- Update README
+
+---
+
 ## v2.0.0
 
 ### Features
