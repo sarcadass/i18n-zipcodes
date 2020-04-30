@@ -17,8 +17,8 @@ module.exports = function(countryCode, zipCode) {
 		throw libName + ' The arguments required are two strings: countryCode, zipCode.';
 	}
 
-	if (countryCodeId === 'gb') {
-		throw libName + " Since v.2.0.0, 'GB' has been replaced by 'UK'.";
+	if (countryCodeId === 'uk') {
+		countryCodeId = 'gb';
   }
 
 	if (countryCodeId === 'cs') {
@@ -64,8 +64,9 @@ module.exports = {
 		ca: /^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$/,
 		fo: /^([a-zA-Z]{2}-)?(\d{3})?$/,
 		fr: /^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$/,
+		gb: /^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$/,
 		ge: /^((\d{4})|(\d{6}))$/,
-		ie: /^(([a-zA-Z]{2}(\s(([a-zA-Z0-9]{1})|(\d{2})))?)|([a-zA-Z]{3}))$/,
+		ie: /^(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$/,
 		jp: /^\d{3}(-\d{4})?$/,
 		kr: /^\d{3}-\d{3}$/,
 		lv: /^([a-zA-Z]{2}-)?(\d{4})$/,
@@ -76,7 +77,6 @@ module.exports = {
 		pt: /^\d{4}(-)?\d{3}$/,
 		sz: /^[a-zA-Z]{1}\d{3}$/,
 		tw: /^\d{3}(\d{2})?$/,
-		uk: /^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$/,
 		us: /^\d{5}(-\d{4})?$/
 	},
 
