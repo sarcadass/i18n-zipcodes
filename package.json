@@ -13,8 +13,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "build": "gulp"
+    "build": "gulp",
+    "test": "nyc --reporter=text --reporter=lcov mocha",
+    "codecov": "npx codecov"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
 }
