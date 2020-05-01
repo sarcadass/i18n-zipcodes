@@ -2,7 +2,20 @@
   "name": "i18n-zipcodes",
   "version": "3.0.0",
   "description": "International zipcodes validator based on Regex for Node.js and the browser.",
+  "keywords": [
+    "i18n",
+    "zipcode",
+    "validator",
+    "international",
+    "regex"
+  ],
+  "author": "Benjamin Blonde",
+  "license": "MIT",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarcadass/i18n-zipcodes.git"
@@ -21,17 +34,5 @@
     "gulp-uglify": "^3.0.2",
     "mocha": "^7.1.2",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "keywords": [
-    "i18n",
-    "zipcode",
-    "validator",
-    "international",
-    "regex"
-  ],
-  "author": "Benjamin Blonde",
-  "license": "MIT"
+  }
 }
