@@ -62,4 +62,14 @@ describe('i18nZipcodes: ', function() {
 
 		expect(isDuplicateCountriesId).to.equal(false);
 	});
+
+	it("should throw an exception if the country code is the obsolete 'CS' (Serbia and Montenegro).", function() {
+		(function() {
+			expect(i18nZipcodes('CS', ''));
+		}).should.Throw("[i18n-zipcodes] Since v.3.0.0, 'CS' has been removed, use 'RS' and/or 'ME' instead.");
+	});
+
+	it("should return true if 'UK' country code fallbacks to 'GB'.", function() {
+		expect(i18nZipcodes('UK', 'SE22 0DE')).to.equal(true);
+	});
 });
