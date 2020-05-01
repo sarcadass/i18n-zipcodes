@@ -23,7 +23,11 @@
   },
   "directories": {
     "test": "test"
-  },
+	},
+	"files": [
+		"lib/*",
+		"dist/*"
+	],
   "dependencies": {},
   "devDependencies": {
     "array-uniq": "^2.1.0",
