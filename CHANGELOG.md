@@ -1,5 +1,14 @@
 # Changelog
 
+## v4.0.0
+
+### Features
+- Update `KR` zipcode regex [@rpaasche](https://github.com/rpaasche)
+
+### Miscellaneous
+- Update dev dependencies
+
+
 ## v3.1.0
 
 ### Features
