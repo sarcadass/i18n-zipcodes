@@ -71,5 +71,13 @@ describe('i18nZipcodes: ', function() {
 
 	it("should return true if 'UK' country code fallbacks to 'GB'.", function() {
 		expect(i18nZipcodes('UK', 'SE22 0DE')).to.equal(true);
+		expect(i18nZipcodes('UK', 'CR0 0XZ')).to.equal(true);
+		expect(i18nZipcodes('UK', 'CR00XZ')).to.equal(true);
+		expect(i18nZipcodes('UK', '2275 CM')).to.equal(false);
+	});
+
+	it("'KR' changed to 5 digist.", function() {
+		expect(i18nZipcodes('KR', '22756')).to.equal(true);
+		expect(i18nZipcodes('KR', '227-256')).to.equal(false);
 	});
 });
