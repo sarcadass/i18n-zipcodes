@@ -80,4 +80,10 @@ describe('i18nZipcodes: ', function() {
 		expect(i18nZipcodes('KR', '22756')).to.equal(true);
 		expect(i18nZipcodes('KR', '227-256')).to.equal(false);
 	});
+
+	it("IL should support 5 and 7 digist.", function() {
+		expect(i18nZipcodes('IL', '30100')).to.equal(true);
+		expect(i18nZipcodes('IL', '9322115')).to.equal(true);
+		expect(i18nZipcodes('IL', '3010')).to.equal(false);
+	});
 });
