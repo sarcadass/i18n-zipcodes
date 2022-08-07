@@ -1,4 +1,4 @@
-/*! i18n-zipcodes v4.0.0 - https://github.com/sarcadass/i18n-zipcodes */
+/*! i18n-zipcodes v5.0.0 - https://github.com/sarcadass/i18n-zipcodes */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
@@ -67,6 +67,7 @@ module.exports = {
 		gb: /^(([A-Z]{1,2}[0-9][A-Z0-9]?|ASCN|STHL|TDCU|BBND|[BFS]IQQ|PCRN|TKCA) ?[0-9][A-Z]{2}|BFPO ?[0-9]{1,4}|(KY[0-9]|MSR|VG|AI)[ -]?[0-9]{4}|[A-Z]{2} ?[0-9]{2}|GE ?CX|GIR ?0A{2}|SAN ?TA1)$/,
 		ge: /^((\d{4})|(\d{6}))$/,
 		ie: /^(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$/,
+		il: /^((\d{5})|(\d{7}))$/,
 		jp: /^\d{3}(-\d{4})?$/,
 		lv: /^([a-zA-Z]{2}-)?(\d{4})$/,
 		mv: /^\d{4,5}$/,
@@ -83,7 +84,7 @@ module.exports = {
 		countryCode: [
 			'is|mg'.split('|'),
 			'at|au|bd|be|bg|ch|cx|cy|dk|gl|gw|hu|li|lu|md|mk|mz|no|nz|ph|sd|si|tn|ve|xk|za'.split('|'),
-			'as|ba|cu|de|dz|ee|es|fi|fm|gf|gp|gt|gu|hr|ic|id|il|it|ke|kr|kw|lt|ma|me|mh|mm|mp|mq|mx|my|pk|pm|pr|ps|pw|re|sa|sm|th|tr|ua|uy|vi|vn|yu|zm'.split('|'),
+			'as|ba|cu|de|dz|ee|es|fi|fm|gf|gp|gt|gu|hr|ic|id|it|ke|kr|kw|lt|ma|me|mh|mm|mp|mq|mx|my|pk|pm|pr|ps|pw|re|sa|sm|th|tr|ua|uy|vi|vn|yu|zm'.split('|'),
 			'am|az|bj|by|cn|co|in|kg|kz|mn|ro|rs|ru|sg|tj|tm|uz'.split('|'),
 			'cz|gr|se|sk'.split('|')
 		],

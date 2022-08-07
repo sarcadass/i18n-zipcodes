@@ -1,6 +1,6 @@
 {
   "name": "i18n-zipcodes",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "International zipcodes validator based on Regex for Node.js and the browser.",
   "keywords": [
     "i18n",
@@ -14,8 +14,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "test": "nyc --reporter=text --reporter=lcov mocha",
-    "codecov": "npx codecov"
+    "test": "nyc --reporter=text --reporter=lcov mocha"
   },
   "repository": {
     "type": "git",
