@@ -1,5 +1,15 @@
 # Changelog
 
+## v5.0.0
+
+### Features
+- Update `IL` zipcode regex [@DosOvO](https://github.com/DosOvO)
+
+### Miscellaneous
+- Replace TravisCi by Github actions for CI
+- Update dev dependencies
+
+
 ## v4.0.0
 
 ### Features
